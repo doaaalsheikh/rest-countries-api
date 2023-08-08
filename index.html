@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/styles/master.css" />
+		<!-- font awesome-->
+		<link rel="stylesheet" href="/styles/all.css" />
+		<link rel="stylesheet" href="/styles/all.min.css" />
+		<title>Countries Of World</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="box-shadow">
+				<h3>Where in the world?</h3>
+				<div class="mode-container">
+					<i class="fa-solid fa-moon"></i><span id="mode">Dark Mode</span>
+				</div>
+			</header>
+			<main>
+				<section class="head">
+					<div class="search box-shadow">
+						<i class="fa regular fa-magnifying-glass"></i>
+						<input
+							type="text"
+							name="search"
+							id="search"
+							placeholder="Search for a country..."
+						/>
+					</div>
+					<div class="filter box-shadow">
+						<select id="regions" name="regions">
+							<option value="" disabled selected>
+								Filter by Region<i class="fa-regular fa-arrow-down"></i>
+							</option>
+						</select>
+					</div>
+				</section>
+				<section id="country-list"></section>
+			</main>
+		</div>
+		<script src="./scripts/main.js" type="module"></script>
+		<script src="./scripts/app.js" type="module"></script>
+	</body>
+</html>

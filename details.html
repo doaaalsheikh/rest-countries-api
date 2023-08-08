@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/styles/master.css" />
+		<!-- font awesome-->
+		<link rel="stylesheet" href="/styles/all.css" />
+		<link rel="stylesheet" href="/styles/all.min.css" />
+		<title>Countries Of World</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="box-shadow">
+				<h3>Where in the world?</h3>
+				<div class="mode-container">
+					<i class="fa-solid fa-moon"></i><span id="mode">Dark Mode</span>
+				</div>
+			</header>
+			<main>
+				<a id="btn-back" class="box-shadow"
+					><i class="fa-solid fa-arrow-left-long"></i>Back</a
+				>
+				<section id="country">
+					<div class="img"><img id="country-flag" class="box-shadow" /></div>
+					<div class="country-details">
+						<div class="country-name" id="country-name"></div>
+						<div class="country-info">
+							<div>
+								<div>
+									<span>Native Name: </span><span id="native-name"> </span>
+								</div>
+								<div>
+									<span>Population: </span><span id="population"></span>
+								</div>
+								<div><span>Region: </span><span id="region"></span></div>
+								<div>
+									<span>Sub Region: </span><span id="sub-region"></span>
+								</div>
+								<div><span>Capital: </span><span id="capital"></span></div>
+							</div>
+							<div>
+								<div>
+									<span>Top Level Domain: </span
+									><span id="top-level-domain"></span>
+								</div>
+								<div>
+									<span>Currencies: </span><span id="currencies"></span>
+								</div>
+								<div><span>Languages: </span><span id="languages"></span></div>
+							</div>
+						</div>
+						<div>
+							<span>Border Countries:</span>
+							<div id="borders"></div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<script src="./scripts/country.js" type="module"></script>
+		<script src="./scripts/app.js" type="module"></script>
+	</body>
+</html>

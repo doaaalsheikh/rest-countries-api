@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+	--darkMode-darkBlue-elements: hsl(209, 23%, 22%);
+	--darkMode-veryDarkBlue-background: hsl(207, 26%, 17%);
+	--darkMode-white-text: hsl(0, 0%, 100%);
+	--lightMode-veryDarkBlue-text: hsl(200, 15%, 8%);
+	--lightMode-darkGray-input: hsl(0, 0%, 52%);
+	--lightMode-veryLightGray-background: hsl(0, 0%, 98%);
+	--lightMode-white-elements: hsl(0, 0%, 100%);
+}
+
+html,
+body {
+	font-family: "Nunito Sans", sans-serif;
+	/* height: 100%; */
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: var(--lightMode-veryDarkBlue-text);
+}
+.container {
+	margin: auto;
+	font-size: 14px;
+	height: 100%;
+}
+.box-shadow.dark-mode {
+	box-shadow: 0 0px 5px 2px #202b30;
+}
+.box-shadow.light-mode {
+	box-shadow: 0 0px 5px 2px #e4e4e4;
+}
+.container.dark-mode {
+	background-color: var(--darkMode-veryDarkBlue-background);
+	color: var(--darkMode-white-text);
+}
+header.dark-mode,
+.filter.dark-mode,
+select.dark-mode,
+article.dark-mode,
+article .country-name.dark-mode,
+#btn-back.dark-mode,
+#borders > a.dark-mode {
+	background-color: var(--darkMode-darkBlue-elements);
+	color: var(--darkMode-white-text);
+}
+.search.dark-mode,
+.search input.dark-mode,
+.search input.dark-mode::placeholder {
+	background-color: var(--darkMode-darkBlue-elements);
+	color: var(--lightMode-veryLightGray-background);
+}
+.container.light-mode {
+	background-color: var(--lightMode-veryLightGray-background);
+	color: var(--lightMode-veryDarkBlue-text);
+}
+header.light-mode,
+.filter.light-mode,
+select.light-mode,
+article.light-mode,
+article .country-name.light-mode,
+#btn-back.light-mode,
+#borders > a.light-mode {
+	background-color: var(--lightMode-white-elements);
+	color: var(--lightMode-veryDarkBlue-text);
+}
+.search.light-mode,
+.search input.light-mode,
+.search input.light-mode::placeholder {
+	background-color: var(--lightMode-white-elements);
+	color: var(--lightMode-darkGray-input);
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 30px;
+	margin-bottom: 20px;
+}
+
+.mode-container {
+	font-weight: 600;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+.mode-container > i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main {
+	padding: 30px;
+}
+main .head {
+	display: flex;
+	/* flex-wrap: wrap; */
+	justify-content: space-between;
+	gap: 10px;
+	margin-bottom: 30px;
+}
+
+.search,
+.filter {
+	position: relative;
+	border-radius: 6px;
+	overflow: hidden;
+}
+.search input {
+	width: 180px;
+	padding: 15px 0 15px 40px;
+	border: none;
+	outline: none;
+	font-size: 12px;
+}
+.search i {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 15px;
+}
+select {
+	/* Add desired styles for the dropdown container */
+	width: 100%;
+	padding: 15px 30px 15px 15px;
+	border: none;
+	outline: none;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.filter::after {
+	content: "\f078";
+	font-family: "FontAwesome";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 10px;
+	pointer-events: none;
+}
+
+i {
+	width: 20px;
+	height: 20px;
+}
+
+section#country-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 40px;
+}
+article {
+	display: flex;
+	flex-direction: column;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+article .img {
+	width: 100%;
+	height: 120px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+article .img img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+article .country-info {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 50%;
+	gap: 3px;
+	padding: 20px;
+}
+
+article .country-name,
+section#country .country-name {
+	font-size: 18px;
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+article span:nth-child(odd) {
+	font-size: 14px;
+	font-weight: 600;
+}
+section#country {
+	display: flex;
+	gap: 40px;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+section#country .img {
+	/* flex: 1 1 auto; */
+	align-self: center;
+}
+section#country .img img {
+	height: 100%;
+	width: 100%;
+}
+section#country .country-details {
+	display: flex;
+	flex-direction: column;
+	font-size: 12px;
+	font-weight: 400;
+	padding: 20px 0;
+}
+section#country > .country-details > .country-info {
+	display: flex;
+	flex-wrap: wrap !important;
+	gap: 6px 12px;
+	margin-bottom: 40px;
+	height: 50%;
+}
+section#country > .country-details > .country-info > div {
+	display: flex;
+	flex-direction: column;
+}
+
+section#country > .country-details > .country-info > div > div {
+	display: flex;
+	align-items: flex-start;
+	text-align: left;
+	/* gap: 5px;  */
+}
+section#country
+	> .country-details
+	> .country-info
+	> div
+	> div
+	> span:first-of-type {
+	font-weight: 800;
+	min-width: 80px;
+	max-width: 200px;
+}
+
+section#country > .country-details > div:nth-child(3) {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+section#country > .country-details > div:nth-child(3) > span:first-of-type {
+	font-weight: 800;
+	justify-self: flex-start;
+}
+
+section#country > .country-details > div:nth-child(3) > #borders {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section#country > .country-details > div:nth-child(3) > #borders > a {
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin: 3px;
+	cursor: pointer;
+}
+#btn-back {
+	padding: 5px 22px;
+	border-radius: 5px;
+	font-size: 10px;
+	font-weight: 600;
+	cursor: pointer;
+}
+#btn-back > i {
+	margin-right: 3px;
+}
+
+@media (max-width: 375px) {
+	header {
+		padding: 10px 20px;
+		font-size: 10px;
+	}
+	.search,
+	.filter {
+		flex: auto;
+	}
+	main,
+	article .country-info {
+		padding: 20px;
+	}
+	main .head {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	section#country .img img {
+		width: 100%;
+	}
+
+	section#country > .country-details > div:nth-child(3) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	section#country > .country-details > div:nth-child(3) > #borders > a {
+		padding: 5px;
+	}
+}
