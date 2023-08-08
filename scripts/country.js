@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	btnBack.addEventListener("click", () => {
-		btnBack.href = "/";
+		btnBack.href = "./index.html";
 	});
 
 	// Add EventListener To Visibility Mode To Toggle Between Dark And Light
