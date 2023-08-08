@@ -40,8 +40,8 @@ Users are able to:
 ![](./screenshots/desktop-dark-details.png)
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/doaaalsheikh/rest-countries-api)
-- Live Site URL: [Add live site URL here]( https://doaaalsheikh.github.io/rest-countries-api/)
+- Solution URL: [github repository](https://github.com/doaaalsheikh/rest-countries-api)
+- Live Site URL: [live site on github]( https://doaaalsheikh.github.io/rest-countries-api/)
 
 ## My process
 
