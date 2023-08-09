@@ -60,24 +60,23 @@ document.addEventListener("DOMContentLoaded", () => {
 			countryFlag.src = country[0].flags ? country[0].flags.png : "";
 			countryName.textContent = country[0].name.common
 				? country[0].name.common
-				: "";
-			nativeName.textContent = Object.values(country[0].name.nativeName)[0]
-				.official
+				: "-";
+			nativeName.textContent = country[0].name.nativeName
 				? Object.values(country[0].name.nativeName)[0].official
-				: "";
+				: "-";
 			population.textContent = country[0].population
 				? country[0].population
-				: "";
-			region.textContent = country[0].region ? country[0].region : "";
-			subRegion.textContent = country[0].subregion ? country[0].subregion : "";
-			capital.textContent = country[0].capital[0] ? country[0].capital[0] : "";
-			topLevelDomain.textContent = country[0].tld[0] ? country[0].tld[0] : "";
-			currencies.textContent = Object.values(country[0].currencies)[0].name
+				: "-";
+			region.textContent = country[0].region ? country[0].region : "-";
+			subRegion.textContent = country[0].subregion ? country[0].subregion : "-";
+			capital.textContent = country[0].capital ? country[0].capital[0] : "-";
+			topLevelDomain.textContent = country[0].tld ? country[0].tld[0] : "-";
+			currencies.textContent = country[0].currencies
 				? Object.values(country[0].currencies)[0].name
-				: "";
-			languages.textContent = Object.values(country[0].languages)
+				: "-";
+			languages.textContent = country[0].languages
 				? Object.values(country[0].languages).join(", ")
-				: "";
+				: "-";
 			if (country[0].borders) {
 				borderCountries.innerHTML = "";
 				country[0].borders.forEach((element) => {

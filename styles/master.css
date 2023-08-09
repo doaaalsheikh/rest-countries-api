@@ -216,7 +216,7 @@ section#country .country-details {
 }
 section#country > .country-details > .country-info {
 	display: flex;
-	flex-wrap: wrap !important;
+	flex-wrap: wrap;
 	gap: 6px 12px;
 	margin-bottom: 40px;
 	height: 50%;
@@ -257,6 +257,7 @@ section#country > .country-details > div:nth-child(3) > span:first-of-type {
 section#country > .country-details > div:nth-child(3) > #borders {
 	display: flex;
 	flex-wrap: wrap;
+	max-width: 400px;
 }
 
 section#country > .country-details > div:nth-child(3) > #borders > a {
