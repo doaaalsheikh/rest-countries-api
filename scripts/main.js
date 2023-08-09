@@ -50,10 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			const countryCapital = document.createElement("span");
 
 			countryFlag.src = country.flags.png;
+			countryFlag.alt = country.name.common;
 			countryName.textContent =
 				country.name.common != "" ? country.name.common : "";
 			// countryName.href = `details.html`;
-			countryName.href = `details.html?country=${country.name.common}`;
+			countryName.href = `details.html?country=${encodeURIComponent(
+				country.name.common
+			)}`;
 			// countryName.target = `blank`;
 
 			lblPopulation.textContent = "Population: ";
@@ -84,7 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			countryLink.classList.add("box-shadow");
 
 			// countryName.href = `details.html`;
-			countryLink.href = `details.html?country=${country.name.common}`;
+			countryLink.href = `details.html?country=${encodeURIComponent(
+				country.name.common
+			)}`;
 			// countryLink.target = "blank";
 
 			divFlag.appendChild(countryFlag);
